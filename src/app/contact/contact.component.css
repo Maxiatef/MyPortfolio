@@ -1,0 +1,143 @@
+/* Centering Wrapper */
+.page-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Style */
+.content {
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+    background: #e8e8e8;
+    border-radius: 15px;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 6px rgba(94, 104, 121, 0.288);
+}
+
+/* Heading */
+.content .text {
+    font-size: 33px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: #595959;
+    text-align: center;
+}
+
+/* Input Field Container */
+.field {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.field:nth-child(2) {
+    margin-top: 20px;
+}
+
+/* Input Box */
+.field .input {
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background: #e8e8e8;
+    color: #595959;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 5px #babECC, inset -5px -5px 10px #ffffff73;
+}
+
+.field .input:focus {
+    box-shadow: inset 1px 1px 2px #babECC, inset -1px -1px 2px #ffffff73;
+}
+
+/* Icon */
+.field .span {
+    position: absolute;
+    color: #595959;
+    width: 50px;
+    line-height: 55px;
+}
+
+/* Label */
+.field .label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+    pointer-events: none;
+    color: #666666;
+    transition: 0.3s;
+}
+
+/* Hide label on input */
+.field .input:valid~.label,
+.field .input:focus~.label {
+    opacity: 0;
+}
+
+/* Forgot Password */
+.forgot-pass {
+    text-align: left;
+    margin: 10px 0 10px 5px;
+}
+
+.forgot-pass a {
+    font-size: 16px;
+    color: #666666;
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+/* Sign-up Text */
+.sign-up {
+    margin: 10px 0;
+    color: #595959;
+    font-size: 16px;
+    text-align: center;
+}
+
+.sign-up a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.sign-up a:hover {
+    text-decoration: underline;
+}
+
+.input.message {
+    height: 200px;
+    resize: none;
+    /* prevents user from resizing manually */
+    padding-top: 15px;
+    /* extra space inside */
+    line-height: 1.5;
+}
