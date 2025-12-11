@@ -1,5 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color:#e8e8e8 !important;
+    background-color: #e8e8e8 !important;
     color: black !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive container adjustments */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Better responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main content should take available space */
+router-outlet {
+    display: block;
+    flex: 1;
 }

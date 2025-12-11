@@ -1,5 +1,96 @@
+.about-container {
+    padding: 2rem 0;
+}
 
 .abt {
-    color: aliceblue;
-    margin-top: 20px;
+    color: #0c0c0c;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-list {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.about-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.section-divider {
+    margin: 2rem 0;
+    border-top: 2px solid #ddd;
+    opacity: 1;
+}
+
+.profile-img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .abt {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+    
+    .profile-img {
+        margin-bottom: 2rem;
+        width: 250px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-container {
+        padding: 1rem 0;
+    }
+    
+    .abt {
+        font-size: 1.75rem;
+    }
+    
+    .profile-img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .abt {
+        font-size: 1.5rem;
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+    }
+    
+    .about-list {
+        margin-left: 1rem;
+    }
+    
+    .profile-img {
+        width: 180px;
+    }
 }

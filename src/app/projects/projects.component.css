@@ -1,22 +1,44 @@
-img {
-    width: 100%;
-    height: auto;
+.projects-container {
+    padding-bottom: 3rem;
 }
 
-.modal {
-    backdrop-filter: blur(3px);
+.projects-title {
+    font-family: monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0c0c0c;
+    margin-bottom: 2rem;
 }
 
-.modal-content {
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.project-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    background: #ffffff !important;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
 }
 
-.card img {
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.project-card .card-body {
+    padding: 1rem;
+}
+
+.project-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
 }
 
 .custom-modal {
@@ -25,22 +47,49 @@ img {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1050;
+    backdrop-filter: blur(5px);
 }
 
 .custom-modal-content {
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
     background: white;
     border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.3s ease-in-out;
+    position: relative;
 }
 
+.custom-modal-content .title {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    color: #0c0c0c;
+    font-size: 1.8rem;
+}
+
+.custom-modal-content p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
 
 @keyframes fadeIn {
     from {
@@ -54,3 +103,42 @@ img {
     }
 }
 
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .projects-title {
+        font-size: 2rem;
+    }
+    
+    .project-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .projects-title {
+        font-size: 1.75rem;
+    }
+    
+    .project-img {
+        height: 200px;
+    }
+    
+    .custom-modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .custom-modal-content .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .projects-title {
+        font-size: 1.5rem;
+    }
+    
+    .project-img {
+        height: 180px;
+    }
+}

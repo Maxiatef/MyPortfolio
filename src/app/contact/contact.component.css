@@ -1,16 +1,16 @@
 /* Centering Wrapper */
 .page-wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 100px 20px 100px;
 }
 
 /* Card Style */
 .content {
-    width: 70%;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 600px;
     padding: 40px 30px;
     background: #e8e8e8;
     border-radius: 15px;
@@ -32,10 +32,12 @@
     width: 100%;
     display: flex;
     position: relative;
+    margin-bottom: 20px;
 }
 
-.field:nth-child(2) {
-    margin-top: 20px;
+.field.message-field {
+    height: auto;
+    min-height: 200px;
 }
 
 /* Input Box */
@@ -56,12 +58,25 @@
     box-shadow: inset 1px 1px 2px #babECC, inset -1px -1px 2px #ffffff73;
 }
 
+.input.message {
+    height: 200px;
+    resize: vertical;
+    padding-top: 15px;
+    line-height: 1.5;
+    min-height: 150px;
+}
+
 /* Icon */
 .field .span {
     position: absolute;
     color: #595959;
     width: 50px;
     line-height: 55px;
+    pointer-events: none;
+}
+
+.field.message-field .span {
+    top: 15px;
 }
 
 /* Label */
@@ -81,22 +96,6 @@
     opacity: 0;
 }
 
-/* Forgot Password */
-.forgot-pass {
-    text-align: left;
-    margin: 10px 0 10px 5px;
-}
-
-.forgot-pass a {
-    font-size: 16px;
-    color: #666666;
-    text-decoration: none;
-}
-
-.forgot-pass a:hover {
-    text-decoration: underline;
-}
-
 /* Button */
 button {
     color: #090909;
@@ -109,6 +108,13 @@ button {
     border: 1px solid #e8e8e8;
     transition: all 0.3s;
     box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 8px 8px 15px #c5c5c5, -8px -8px 15px #ffffff;
 }
 
 button:active {
@@ -116,28 +122,51 @@ button:active {
     box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
 
-/* Sign-up Text */
-.sign-up {
-    margin: 10px 0;
-    color: #595959;
-    font-size: 16px;
-    text-align: center;
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .page-wrapper {
+        padding: 80px 15px;
+    }
+    
+    .content {
+        padding: 30px 20px;
+    }
+    
+    .content .text {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .field .input {
+        font-size: 16px;
+        padding-left: 40px;
+    }
+    
+    .input.message {
+        height: 150px;
+        min-height: 120px;
+    }
+    
+    button {
+        font-size: 16px;
+        padding: 0.6em 1.5em;
+    }
 }
 
-.sign-up a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-.sign-up a:hover {
-    text-decoration: underline;
-}
-
-.input.message {
-    height: 200px;
-    resize: none;
-    /* prevents user from resizing manually */
-    padding-top: 15px;
-    /* extra space inside */
-    line-height: 1.5;
+@media (max-width: 575.98px) {
+    .page-wrapper {
+        padding: 70px 10px;
+    }
+    
+    .content {
+        padding: 25px 15px;
+    }
+    
+    .content .text {
+        font-size: 24px;
+    }
+    
+    .field .input {
+        font-size: 15px;
+    }
 }
