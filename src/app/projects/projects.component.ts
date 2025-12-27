@@ -12,9 +12,27 @@ import { CommonModule } from '@angular/common';
 export class ProjectsComponent {
   popups: Popup[] = [
     {
+      title: 'ATTRACT',
+      desc: 'A fullstack project for a web application that displays products, focused on bridging dynamic data rendering with high-performance Technical SEO. Responsive Next.js frontend showcasing gaming products with SEO-friendly pages, product cards, and a server-side API proxy.',
+      img: 'project12.png',
+      link: 'https://seo-product.vercel.app/'
+    },
+    {
+      title: 'FreshCart',
+      desc: 'A modern e-commerce platform built with Angular, featuring product catalog, shopping cart, user authentication, authorization, and secure checkout functionality.',
+      img: 'project7.png',
+      link: 'https://freshcart-rho-six.vercel.app/home'
+    },
+    {
+      title: 'SkySnap',
+      desc: 'This weather app provides real-time weather updates and a 5-day hourly forecast for any city. Featuring a sleek dark theme, it delivers intuitive navigation, detailed weather info, and a responsive design for seamless use across devices. Perfect for planning your day!',
+      img: 'project8.png',
+      link: 'https://sky-snap-ecru.vercel.app/'
+    },
+    {
       title: 'CRUD Operation MVC .NET',
       desc: 'Simple ASP.NET MVC project for managing students and departments. Includes CRUD operations, Entity Framework integration, and dynamic views for adding, editing, and listing records in a clean, functional dashboard interface.',
-      img: 'project1.png',
+      img: 'project9.png',
       link: 'https://github.com/Maxiatef/CRUD_Students_Department_MVC.Net'
     },
     {
@@ -26,8 +44,8 @@ export class ProjectsComponent {
     {
       title: 'Cybersecurity Website',
       desc: 'This is a demonstration of a modern cybersecurity website, built using Bootstrap to provide a clean and responsive user interface.',
-      img: 'project3.png',
-      link: 'https://github.com/Maxiatef/Bootstrap_Project'
+      img: 'project10.png',
+      link: 'https://bootstrap-project-ten-ruddy.vercel.app/'
     },
     {
       title: 'CRUD GraphQL API with Apollo Server',
@@ -38,7 +56,7 @@ export class ProjectsComponent {
     {
       title: 'Real Time Chat Website',
       desc: 'A real-time chat application built with Node.js and Socket.io, allowing users to communicate in real-time with a modern UI.',
-      img: 'project5.png',
+      img: 'project11.png',
       link: 'https://github.com/Maxiatef/Chatroom'
     },
     {

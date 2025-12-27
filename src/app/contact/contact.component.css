@@ -10,8 +10,8 @@
 /* Card Style */
 .content {
     width: 100%;
-    max-width: 600px;
-    padding: 40px 30px;
+    max-width: 700px;
+    padding: 50px 40px;
     background: #e8e8e8;
     border-radius: 15px;
     box-shadow: -3px -3px 7px #ffffff73, 3px 3px 6px rgba(94, 104, 121, 0.288);
@@ -21,9 +21,151 @@
 .content .text {
     font-size: 33px;
     font-weight: 600;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     color: #595959;
     text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    width: 100%;
+}
+
+.contact-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 25px;
+    background: #e8e8e8;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #595959;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.contact-btn i {
+    font-size: 24px;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 15px #c5c5c5, -8px -8px 15px #ffffff;
+}
+
+.contact-btn:active {
+    transform: translateY(-1px);
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+/* Individual button colors on hover */
+.contact-btn.whatsapp:hover {
+    color: #25D366;
+}
+
+.contact-btn.github:hover {
+    color: #333;
+}
+
+.contact-btn.linkedin:hover {
+    color: #0077B5;
+}
+
+.contact-btn.email:hover {
+    color: #EA4335;
+}
+
+.contact-btn.facebook:hover {
+    color: #1877F2;
+}
+
+.contact-btn.discord:hover {
+    color: #5865F2;
+}
+
+.contact-btn.cv:hover {
+    color: #FF6B6B;
+}
+
+/* CV Section - separate row */
+.cv-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cv-section .contact-btn {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .page-wrapper {
+        padding: 80px 15px;
+    }
+    
+    .content {
+        padding: 40px 25px;
+    }
+    
+    .content .text {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .contact-buttons {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contact-btn {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    
+    .contact-btn i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .page-wrapper {
+        padding: 70px 10px;
+    }
+    
+    .content {
+        padding: 30px 20px;
+    }
+    
+    .content .text {
+        font-size: 24px;
+    }
+    
+    .subtitle {
+        font-size: 15px;
+    }
 }
 
 /* Input Field Container */
@@ -120,6 +262,54 @@ button:hover {
 button:active {
     color: #666;
     box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.alert i {
+    font-size: 20px;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    box-shadow: 0 4px 6px rgba(76, 175, 80, 0.2);
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    box-shadow: 0 4px 6px rgba(244, 67, 54, 0.2);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive adjustments */
